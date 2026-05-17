@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+# gdrive-mgr launcher: activates the project venv and runs the GUI module.
+set -euo pipefail
+PROJECT_DIR="$(cd "$(dirname "$(readlink -f "${BASH_SOURCE[0]}")")/.." && pwd)"
+cd "$PROJECT_DIR"
+exec "$PROJECT_DIR/.venv/bin/python" -m gdrive_mgr "$@"

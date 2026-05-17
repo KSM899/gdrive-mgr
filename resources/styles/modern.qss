@@ -1,0 +1,322 @@
+/* gdrive-mgr modern stylesheet — flat, generous spacing, subtle borders.
+
+   Most colors are sourced from the Qt palette so the sheet adapts to both
+   light and dark color schemes without two copies. Hardcoded values are
+   used only for accents (selected/hover) where the palette's defaults look
+   too pale or too saturated. */
+
+/* ---- baseline ---- */
+
+QWidget {
+    font-size: 10pt;
+}
+
+QMainWindow, QDialog {
+    background-color: palette(window);
+}
+
+QLabel {
+    color: palette(text);
+}
+
+QToolTip {
+    background-color: palette(base);
+    color: palette(text);
+    border: 1px solid palette(mid);
+    padding: 4px 6px;
+}
+
+/* ---- toolbar ---- */
+
+QToolBar {
+    background-color: palette(window);
+    border: none;
+    border-bottom: 1px solid palette(mid);
+    padding: 4px 6px;
+    spacing: 4px;
+}
+
+QToolBar QToolButton {
+    background-color: transparent;
+    border: 1px solid transparent;
+    border-radius: 6px;
+    padding: 6px 10px;
+    color: palette(text);
+}
+
+QToolBar QToolButton:hover {
+    background-color: palette(midlight);
+    border-color: palette(mid);
+}
+
+QToolBar QToolButton:pressed {
+    background-color: palette(mid);
+}
+
+QToolBar::separator {
+    background-color: palette(mid);
+    width: 1px;
+    margin: 6px 6px;
+}
+
+/* ---- buttons (general) ---- */
+
+QPushButton {
+    background-color: palette(button);
+    color: palette(button-text);
+    border: 1px solid palette(mid);
+    border-radius: 6px;
+    padding: 6px 14px;
+    min-height: 18px;
+}
+
+QPushButton:hover {
+    background-color: palette(midlight);
+    border-color: palette(highlight);
+}
+
+QPushButton:pressed {
+    background-color: palette(mid);
+}
+
+QPushButton:default {
+    background-color: palette(highlight);
+    color: palette(highlighted-text);
+    border-color: palette(highlight);
+    font-weight: 600;
+}
+
+QPushButton:default:hover {
+    background-color: palette(highlight);
+}
+
+QPushButton:disabled {
+    color: palette(mid);
+    background-color: palette(window);
+}
+
+/* ---- tabs ---- */
+
+QTabWidget::pane {
+    border: none;
+    border-top: 1px solid palette(mid);
+    background-color: palette(base);
+}
+
+QTabBar {
+    qproperty-drawBase: 0;
+    background: palette(window);
+}
+
+QTabBar::tab {
+    background: transparent;
+    color: palette(text);
+    padding: 8px 16px;
+    border: none;
+    border-bottom: 2px solid transparent;
+    margin: 0 2px;
+}
+
+QTabBar::tab:hover {
+    color: palette(text);
+    background: palette(midlight);
+}
+
+QTabBar::tab:selected {
+    border-bottom: 2px solid palette(highlight);
+    color: palette(highlight);
+    font-weight: 600;
+}
+
+/* ---- splitter ---- */
+
+QSplitter::handle {
+    background-color: palette(mid);
+}
+
+QSplitter::handle:horizontal {
+    width: 1px;
+}
+
+/* ---- lists / trees ---- */
+
+QListWidget, QTreeWidget, QTreeView {
+    background-color: palette(base);
+    color: palette(text);
+    border: 1px solid palette(mid);
+    border-radius: 6px;
+    padding: 4px;
+    outline: none;
+    alternate-background-color: palette(alternate-base);
+}
+
+QListWidget::item, QTreeWidget::item, QTreeView::item {
+    padding: 6px 4px;
+    border-radius: 4px;
+}
+
+QListWidget::item:hover, QTreeWidget::item:hover, QTreeView::item:hover {
+    background-color: palette(midlight);
+}
+
+QListWidget::item:selected, QTreeWidget::item:selected, QTreeView::item:selected {
+    background-color: palette(highlight);
+    color: palette(highlighted-text);
+}
+
+QHeaderView::section {
+    background-color: palette(window);
+    color: palette(text);
+    padding: 6px 8px;
+    border: none;
+    border-bottom: 1px solid palette(mid);
+    font-weight: 600;
+}
+
+/* ---- inputs ---- */
+
+QLineEdit, QPlainTextEdit, QTextEdit, QComboBox {
+    background-color: palette(base);
+    color: palette(text);
+    border: 1px solid palette(mid);
+    border-radius: 6px;
+    padding: 6px 8px;
+    selection-background-color: palette(highlight);
+    selection-color: palette(highlighted-text);
+}
+
+QLineEdit:focus, QPlainTextEdit:focus, QTextEdit:focus, QComboBox:focus {
+    border-color: palette(highlight);
+}
+
+QComboBox::drop-down {
+    border: none;
+    padding-right: 6px;
+}
+
+/* ---- group box ---- */
+
+QGroupBox {
+    background-color: palette(base);
+    border: 1px solid palette(mid);
+    border-radius: 8px;
+    margin-top: 14px;
+    padding: 14px 12px 10px 12px;
+    font-weight: 600;
+}
+
+QGroupBox::title {
+    subcontrol-origin: margin;
+    subcontrol-position: top left;
+    padding: 0 6px;
+    color: palette(text);
+    background-color: palette(window);
+    left: 10px;
+}
+
+/* ---- progress bar ---- */
+
+QProgressBar {
+    background-color: palette(base);
+    border: 1px solid palette(mid);
+    border-radius: 6px;
+    text-align: center;
+    color: palette(text);
+    min-height: 14px;
+}
+
+QProgressBar::chunk {
+    background-color: palette(highlight);
+    border-radius: 5px;
+    margin: 1px;
+}
+
+/* ---- scroll bars (subtle) ---- */
+
+QScrollBar:vertical {
+    background: transparent;
+    width: 10px;
+    margin: 2px;
+}
+
+QScrollBar::handle:vertical {
+    background-color: palette(mid);
+    border-radius: 5px;
+    min-height: 24px;
+}
+
+QScrollBar::handle:vertical:hover {
+    background-color: palette(dark);
+}
+
+QScrollBar::add-line:vertical, QScrollBar::sub-line:vertical {
+    background: none;
+    height: 0;
+}
+
+QScrollBar:horizontal {
+    background: transparent;
+    height: 10px;
+    margin: 2px;
+}
+
+QScrollBar::handle:horizontal {
+    background-color: palette(mid);
+    border-radius: 5px;
+    min-width: 24px;
+}
+
+QScrollBar::handle:horizontal:hover {
+    background-color: palette(dark);
+}
+
+QScrollBar::add-line:horizontal, QScrollBar::sub-line:horizontal {
+    background: none;
+    width: 0;
+}
+
+/* ---- status bar ---- */
+
+QStatusBar {
+    background-color: palette(window);
+    color: palette(text);
+    border-top: 1px solid palette(mid);
+}
+
+/* ---- check / radio (tighter) ---- */
+
+QCheckBox, QRadioButton {
+    spacing: 8px;
+    padding: 2px;
+    color: palette(text);
+}
+
+QCheckBox::indicator, QRadioButton::indicator {
+    width: 16px;
+    height: 16px;
+}
+
+/* ---- menu (right-click etc) ---- */
+
+QMenu {
+    background-color: palette(base);
+    border: 1px solid palette(mid);
+    border-radius: 6px;
+    padding: 4px;
+}
+
+QMenu::item {
+    padding: 6px 22px 6px 22px;
+    border-radius: 4px;
+}
+
+QMenu::item:selected {
+    background-color: palette(highlight);
+    color: palette(highlighted-text);
+}
+
+QMenu::separator {
+    height: 1px;
+    background-color: palette(mid);
+    margin: 4px 6px;
+}

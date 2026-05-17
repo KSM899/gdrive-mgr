@@ -1,0 +1,12 @@
+[Desktop Entry]
+Type=Application
+Name=Google Drive Manager
+GenericName=Cloud Storage
+Comment=Mount Google Drive and keep selected folders or files available offline
+Exec=@BINDIR@/gdrive-mgr
+Icon=folder-cloud
+Terminal=false
+Categories=Network;FileTransfer;Qt;
+Keywords=google;drive;cloud;sync;rclone;
+StartupNotify=true
+StartupWMClass=Google Drive Manager

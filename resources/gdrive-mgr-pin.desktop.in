@@ -1,0 +1,33 @@
+[Desktop Entry]
+Type=Service
+ServiceTypes=KonqPopupMenu/Plugin
+MimeType=inode/directory;all/allfiles;
+X-KDE-Priority=TopLevel
+Actions=KeepOffline;MakeOnlineOnly;SyncNow;ShareLink;Share;
+
+X-KDE-Submenu=Google Drive
+
+[Desktop Action KeepOffline]
+Name=Keep always on this device
+Icon=document-save
+Exec=@BINDIR@/gdrive-mgr-cli pin-path %f
+
+[Desktop Action MakeOnlineOnly]
+Name=Make online-only (free space)
+Icon=cloud-upload
+Exec=@BINDIR@/gdrive-mgr-cli unpin-path --delete-local %f
+
+[Desktop Action SyncNow]
+Name=Sync now
+Icon=view-refresh
+Exec=@BINDIR@/gdrive-mgr-cli sync-now %f
+
+[Desktop Action ShareLink]
+Name=Copy shareable link
+Icon=edit-copy
+Exec=@BINDIR@/gdrive-mgr-cli share-link %f
+
+[Desktop Action Share]
+Name=Share with others…
+Icon=document-share
+Exec=@BINDIR@/gdrive-mgr-cli share %f

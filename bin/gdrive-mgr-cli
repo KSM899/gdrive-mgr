@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# Thin wrapper for invoking the gdrive_mgr CLI from outside the project tree
+# (used by the Dolphin service menu and the systemd units).
+set -euo pipefail
+PROJECT_DIR="$(cd "$(dirname "$(readlink -f "${BASH_SOURCE[0]}")")/.." && pwd)"
+cd "$PROJECT_DIR"
+exec "$PROJECT_DIR/.venv/bin/python" -m gdrive_mgr.cli "$@"

@@ -1,0 +1,38 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+dist/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Plugin build artifacts (C++)
+plugin/build/
+plugin/.cache/
+
+# IDE/editor noise
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Local config and runtime state (we ship none of this; just guard the tree)
+*.local
+*.session
+
+# Don't commit broken config copies
+*.json.broken
+*.json.tmp
+*.lock
