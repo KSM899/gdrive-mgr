@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  SPDX-License-Identifier: CC0-1.0
+  Copyright (C) 2026 Khalid Said
+-->
+<component type="desktop-application">
+  <id>io.github.gdrive_mgr</id>
+  <name>Google Drive Manager</name>
+  <summary>KDE-native Google Drive client with on-demand mount and offline pinning</summary>
+  <metadata_license>CC0-1.0</metadata_license>
+  <project_license>GPL-3.0-or-later</project_license>
+
+  <description>
+    <p>
+      A KDE Plasma 6 Google Drive client that gives Linux desktops the same
+      experience the official Google Drive Desktop offers on Windows and macOS.
+      Built on rclone.
+    </p>
+    <p>Features:</p>
+    <ul>
+      <li>On-demand FUSE mount — your whole Drive appears as a regular folder; files download only when opened.</li>
+      <li>Per-folder and per-file "Keep always on this device" — right-click in Dolphin to pin items for offline access.</li>
+      <li>Reactive background sync via inotify — local edits propagate within seconds.</li>
+      <li>Dolphin overlay badges showing sync state (synced, syncing, error, online-only) on every file and folder.</li>
+      <li>Native Qt share dialog — add people by email, set Viewer/Commenter/Editor roles, send notification messages, revoke access; no browser hop required.</li>
+      <li>Multiple Google accounts side by side.</li>
+      <li>System tray icon with color-coded global sync state and per-account quick toggles.</li>
+      <li>Bisync conflict resolution UI for the inevitable two-sided edits.</li>
+      <li>Disk-usage panel showing real on-disk footprint per account.</li>
+    </ul>
+  </description>
+
+  <launchable type="desktop-id">io.github.gdrive_mgr.desktop</launchable>
+
+  <url type="homepage">https://github.com/KSM899/gdrive-mgr</url>
+  <url type="bugtracker">https://github.com/KSM899/gdrive-mgr/issues</url>
+  <url type="vcs-browser">https://github.com/KSM899/gdrive-mgr</url>
+
+  <developer id="io.github.ksm899">
+    <name>Khalid Said</name>
+  </developer>
+
+  <categories>
+    <category>Network</category>
+    <category>FileTransfer</category>
+    <category>Qt</category>
+    <category>KDE</category>
+  </categories>
+
+  <keywords>
+    <keyword>google drive</keyword>
+    <keyword>rclone</keyword>
+    <keyword>cloud storage</keyword>
+    <keyword>sync</keyword>
+    <keyword>dolphin</keyword>
+  </keywords>
+
+  <screenshots>
+    <screenshot type="default">
+      <caption>Main application window with account status</caption>
+      <image>https://raw.githubusercontent.com/KSM899/gdrive-mgr/main/docs/screenshots/main-window.png</image>
+    </screenshot>
+    <screenshot>
+      <caption>Dolphin right-click menu with Google Drive integration</caption>
+      <image>https://raw.githubusercontent.com/KSM899/gdrive-mgr/main/docs/screenshots/dolphin-menu.png</image>
+    </screenshot>
+    <screenshot>
+      <caption>Native sharing dialog for adding people directly</caption>
+      <image>https://raw.githubusercontent.com/KSM899/gdrive-mgr/main/docs/screenshots/share-dialog.png</image>
+    </screenshot>
+  </screenshots>
+
+  <releases>
+    <release version="0.1.0" date="2026-05-17">
+      <description>
+        <p>Initial public release. Files-on-demand mount, folder + file pinning, in-app sharing, Dolphin overlay badges, multi-account support.</p>
+      </description>
+      <url>https://github.com/KSM899/gdrive-mgr/releases/tag/v0.1.0</url>
+    </release>
+  </releases>
+
+  <content_rating type="oars-1.1"/>
+
+  <provides>
+    <binary>gdrive-mgr</binary>
+    <binary>gdrive-mgr-cli</binary>
+  </provides>
+
+  <recommends>
+    <display_length compare="ge">768</display_length>
+  </recommends>
+
+  <supports>
+    <control>pointing</control>
+    <control>keyboard</control>
+    <control>touch</control>
+  </supports>
+</component>

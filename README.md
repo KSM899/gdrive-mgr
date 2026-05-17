@@ -1,5 +1,12 @@
 # gdrive-mgr
 
+[![License: GPL v3+](https://img.shields.io/badge/license-GPL--3.0--or--later-blue.svg)](LICENSE)
+[![Latest release](https://img.shields.io/github/v/release/KSM899/gdrive-mgr?label=release)](https://github.com/KSM899/gdrive-mgr/releases/latest)
+[![Python](https://img.shields.io/badge/python-3.11%2B-blue.svg)](https://www.python.org/)
+[![Qt](https://img.shields.io/badge/Qt-6-41cd52.svg)](https://www.qt.io/)
+[![Platform](https://img.shields.io/badge/platform-KDE%20Plasma%206-1d99f3.svg)](https://kde.org/plasma-desktop/)
+[![Stars](https://img.shields.io/github/stars/KSM899/gdrive-mgr?style=social)](https://github.com/KSM899/gdrive-mgr/stargazers)
+
 **A KDE-native Google Drive manager for Linux** — files-on-demand mount, per-folder and per-file pinning, background sync, in-app sharing, and Dolphin overlay badges. Built on [rclone](https://rclone.org).
 
 If you've used Google Drive Desktop on Windows or macOS and missed the same experience on KDE Plasma, this fills that gap.
